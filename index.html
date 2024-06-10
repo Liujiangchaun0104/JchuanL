@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="static/css/index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.fancybox@2.1.5/source/jquery.fancybox.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+    <link rel="stylesheet" href="css/style.css">
     <script type="text/javascript">
         if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
             alert('朋友，上古浏览器不支持呢~');
@@ -22,6 +24,7 @@
 
 <body>
     <div id="body-wrap">
+        <!-- 导航栏 引入了外部的Typed.js库 这个库将文本打印到背景图片中 -->
         <nav class="not_index_bg" id="nav" style="background-image:url(https://api.ixiaowai.cn/api/api.php)">
             <div id="page_site-info">
                 <div id="site-title">
@@ -29,7 +32,7 @@
                     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
                     <script>
                         var typed = new Typed(".blogtitle", {
-                            strings: ['SATY HUNGRY，STAY FOOLISH',],
+                            strings: ['SATY HUNGRY，STAY FOOLISH','In case i don`t see you, good moring, good noon and good night.'],
                             startDelay: 300,
                             typeSpeed: 100,
                             loop: true,
@@ -40,6 +43,7 @@
                 </div>
             </div>
         </nav>
+
         <main id="content-outer">
             <div class="layout_page" id="content-inner">
                 <div class="aside_content" id="aside_content">
@@ -47,7 +51,7 @@
                         <div class="card-content">
                             <div class="card-info-avatar is-center">
                                 <img class="avatar-img"
-                                    src="./photo/石原里美.jpeg"
+                                    src="img/1.jpeg"
                                     alt="avatar">
                                 <div class="author-info__name">chuanchuan🍢</div>
                                 <div class="author-info__description">oo后，前端开发，<u>学生，实习</u></div>
@@ -104,10 +108,56 @@
                         <meting-js auto="">
                         </meting-js>
                         <!-- 音乐播放器 -->
-                        <audio controls autoplay>
+                        <!-- <audio controls autoplay>
                             <source src="./sing/暗号-周杰伦_哔哩哔哩_bilibili.mp4" type="audio/mpeg" >
                             Your browser does not support the audio element.
-                        </audio>
+                        </audio> -->
+                            <div id="player">
+                                <!-- 歌曲信息模块 -->
+                                <div id="player-content1">
+                                    <!-- 歌曲名 -->
+                                    <div class="music-name"></div>
+                                    <!-- 歌手名 -->
+                                    <div class="artist-name"></div>
+                                    <!-- 歌曲时间 -->
+                                    <div class="time">
+                                        <!-- 当前播放的时间 -->
+                                        <div class="current-time"></div>
+                                        <!-- 歌曲总时长 -->
+                                        <div class="total-time"></div>
+                                    </div>
+                                    <!-- 进度条 -->
+                                    <div id="s-area">
+                                        <!-- 鼠标移动到进度条上，显示的时间信息 -->
+                                        <div id="ins-time"></div>
+                                        <!-- 鼠标移动到进度条上，进度条变暗部分-->
+                                        <div id="s-hover"></div>
+                                        <!-- 表示当前歌曲播放进度的蓝色进度条 -->
+                                        <div id="seek-bar"></div>
+                                    </div>
+                                </div>
+                                        <!-- 控制模块 -->
+                                        <div id="player-content2">
+                                            <!-- 左侧歌曲封面旋转模块 -->
+                                            <div class="music-imgs">
+                                                <!-- 封面图 -->
+                                                <div class="img"></div>
+                                                <!-- 歌曲缓冲时的提示文字 -->
+                                                <div id="buffer-box">缓冲…</div>
+                                            </div>
+                                            <!-- 右侧歌曲操作模块 -->
+                                            <div√ class="player-controls">
+                                                <!-- 上一首按钮 -->
+                                                <div class="btn prev iconfont">&#xe603;</div>
+                                                <!-- 暂停/播放 按钮 -->
+                                                <div class="btn play-pause icon-jiediankaishi iconfont"></div>
+                                                <!-- 下一首按钮 -->
+                                                <div class="btn next iconfont">&#xe602;</div>
+                                            </div>
+                                        </div>
+                                        </div>
+
+
                         <hr>
 
                         <h2>skills</h2>
@@ -183,7 +233,7 @@
         </main>
         <footer id="footer">
             <div id="footer-wrap">
-                <div class="copyright">&copy;2019 - 2021 BY chuanchuan🍢</div>
+                <div class="copyright">&copy;2019 - 2024 BY chuanchuan🍢</div>
             </div>
         </footer>
     </div>
@@ -280,6 +330,10 @@
             }
         });
     </script>
+    播放器脚本
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/index.js"></script>
+
 </body>
 
 </html>
