@@ -6,14 +6,14 @@
 #player{
     position: relative;
     top: 20px;
-    left:200px;
+    left: 100px;
 }
 /* 歌曲信息模块 */
 #player-content1{
     position: absolute;
     top:0px;
     left:15px;
-    width:320px;
+    width:260px;
     height:90px;
     padding:0 20px 0 130px;
     background: rgb(209, 226, 245);
