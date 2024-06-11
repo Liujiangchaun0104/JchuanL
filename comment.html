@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>前端评论展示示例</title>
+<style>
+    .comments-container {
+        margin: 50px auto;
+        width: 80%;
+        max-width: 600px;
+    }
+    .comment-form {
+        margin-bottom: 20px;
+    }
+    textarea {
+        width: 100%;
+        min-height: 100px;
+        resize: vertical;
+    }
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 10px 2px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+    }
+</style>
+</head>
+<body>
+
+<div class="comments-container">
+    <h2>发表评论</h2>
+    <form class="comment-form" id="commentForm">
+        <label for="username">用户名：</label>
+        <input type="text" id="username" name="username" required>
+        <br><br>
+        <label for="commentText">评论内容：</label>
+        <textarea id="commentText" name="commentText" required></textarea>
+        <br><br>
+        <button type="submit">提交评论</button>
+    </form>
+    <h2>评论列表</h2>
+    <div id="commentsList"></div>
+</div>
+
+<script>
+    // 页面加载时从localStorage加载评论列表并显示
+    window.onload = function() {
+        const savedComments = localStorage.getItem('comments');
+        if(savedComments) {
+            document.getElementById('commentsList').innerHTML = savedComments;
+        }
+    };
+
+    // 处理评论表单提交事件
+    document.getElementById('commentForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const username = document.getElementById('username').value;
+        const commentText = document.getElementById('commentText').value;
+
+        if(username && commentText) {
+            const newComment = `
+                <div class="comment">
+                    <strong>${username}：</strong> ${commentText}
+                </div>
+            `;
+
+            // 将新评论添加到页面
+            document.getElementById('commentsList').innerHTML += newComment;
+
+            // 更新localStorage中的评论列表
+            let currentComments = localStorage.getItem('comments') || '';
+            localStorage.setItem('comments', currentComments + newComment);
+
+            // 清空表单
+            document.getElementById('username').value = '';
+            document.getElementById('commentText').value = '';
+
+            alert('评论成功！');
+        } else {
+            alert('请填写用户名和评论内容！');
+        }
+    });
+</script>
+
+
+</body>
+</html>
