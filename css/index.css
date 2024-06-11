@@ -172,6 +172,7 @@ h1 {
   font-size: 20px;
 }
 
+
 .skillbar {
   position: relative;
   display: block;
@@ -389,4 +390,9 @@ audio::-webkit-media-controls-pause-button {
   border-radius: 50%;
   width: 40px;
   height: 40px;
+}
+/* 空格样式 */
+
+.space{
+    margin-left: 20px;
 }
