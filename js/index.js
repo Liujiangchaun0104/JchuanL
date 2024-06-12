@@ -259,8 +259,12 @@ $(function(){
 function displayTime() {
     let now = new Date();
     let clockElement = document.querySelector('.info');
-    let timeString = `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
-    clockElement.textContent = '现在是北京时间：'+timeString+'       BJTime';
+
+    // 使用补0函数确保数字始终为两位
+    let padZero = (num) => (num < 10 ? '0' : '') + num;
+
+    let timeString = `${padZero(now.getHours())}:${padZero(now.getMinutes())}:${padZero(now.getSeconds())}`;
+    clockElement.textContent = '当前是北京时间: '+timeString+' '+'BJTime';
 }
 
 // 初始化显示一次
