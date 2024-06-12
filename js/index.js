@@ -269,14 +269,23 @@ $(function () {
 function displayTime() {
   let now = new Date();
   let clockElement = document.querySelector(".timeinfo");
-
+  let showtime = document.querySelector('.showtime');
+  let year = document.querySelector('.year')
+  let month = document.querySelector('.month')
+  let day = document.querySelector('.day')
+  let hour = document.querySelector('.hour')
+  let min = document.querySelector('.min')
+  let sec = document.querySelector('.sec')
   // 使用补0函数确保数字始终为两位
   let padZero = (num) => (num < 10 ? "0" : "") + num;
 
-  let timeString = `${padZero(now.getFullYear())}年 ${padZero(now.getMonth()+1)}月 ${padZero(now.getDate())}日 ${padZero(now.getHours())}:${padZero(
-    now.getMinutes()
-  )}:${padZero(now.getSeconds())}`;
-  clockElement.textContent = "当前是北京时间: " + timeString ;
+  clockElement.textContent = "当前是北京时间: " ;
+  year.innerHTML = `${padZero(now.getFullYear())}年`;
+  month.innerHTML = `${padZero(now.getMonth() + 1)}月`;
+  day.innerHTML = `${padZero(now.getDate())}日`;
+  hour.innerHTML = `${padZero(now.getHours())}时`;
+  min.innerHTML = `${padZero(now.getMinutes())}分`;
+  sec.innerHTML = `${padZero(now.getSeconds())}秒`;
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -295,7 +304,7 @@ function startCountdownToDate(targetDateString, onCountdownEnd) {
   function updateCountdown() {
     let currentDate = new Date();
     let remainingTime = targetDate - currentDate;
-
+    let countdownShowtime = document.querySelector('.countdown-showtime')
     if (remainingTime <= 0) {
       clearInterval(timer);
       countdownElement.innerText = "已经过了目标日期!";
@@ -312,12 +321,16 @@ function startCountdownToDate(targetDateString, onCountdownEnd) {
       );
       let seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
 
-      countdownElement.innerText = `距离2025元旦还剩${days
-        .toString()
-        .padStart(2, "0")}天 ${hours.toString().padStart(2, "0")}小时 ${minutes
-        .toString()
-        .padStart(2, "0")}分钟 ${seconds.toString().padStart(2, "0")}秒`;
+      countdownElement.innerText = `距离2025元旦还剩:`;
+        countdownShowtime.innerHTML = `${days
+          .toString()
+          .padStart(2, "0")}天 ${hours
+          .toString()
+          .padStart(2, "0")}小时 ${minutes
+          .toString()
+          .padStart(2, "0")}分钟 ${seconds.toString().padStart(2, "0")}秒`;
     }
+
   }
 
   // 立即更新一次并开始计时器
