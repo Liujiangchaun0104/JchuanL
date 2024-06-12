@@ -273,10 +273,10 @@ function displayTime() {
   // 使用补0函数确保数字始终为两位
   let padZero = (num) => (num < 10 ? "0" : "") + num;
 
-  let timeString = `${padZero(now.getHours())}:${padZero(
+  let timeString = `${padZero(now.getFullYear())}年 ${padZero(now.getMonth()+1)}月 ${padZero(now.getDate())}日 ${padZero(now.getHours())}:${padZero(
     now.getMinutes()
   )}:${padZero(now.getSeconds())}`;
-  clockElement.textContent = "当前是北京时间: " + timeString + " " + "BJTime";
+  clockElement.textContent = "当前是北京时间: " + timeString ;
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -312,7 +312,7 @@ function startCountdownToDate(targetDateString, onCountdownEnd) {
       );
       let seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
 
-      countdownElement.innerText = `距离元旦还剩${days
+      countdownElement.innerText = `距离2025元旦还剩${days
         .toString()
         .padStart(2, "0")}天 ${hours.toString().padStart(2, "0")}小时 ${minutes
         .toString()

@@ -421,3 +421,13 @@ audio::-webkit-media-controls-pause-button {
     font-size: 20px;
 
 }
+
+.funnyemoji{
+    width: 100%;
+    height: 50px;
+}
+
+.funnyemoji a{
+    font-size: 14px;
+    text-decoration: none;
+}
