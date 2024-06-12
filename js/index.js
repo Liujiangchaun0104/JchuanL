@@ -279,11 +279,13 @@ function displayTime() {
   clockElement.textContent = "当前是北京时间: " + timeString + " " + "BJTime";
 }
 
-// 初始化显示一次
-displayTime();
+document.addEventListener("DOMContentLoaded", function () {
+  // 初始化显示一次
+  displayTime();
 
-// 每秒更新一次
-setInterval(displayTime, 1000);
+  // 每秒更新一次
+  setInterval(displayTime, 1000);
+});
 
 function startCountdownToDate(targetDateString, onCountdownEnd) {
   let countdownElement = document.querySelector(".countdown");
