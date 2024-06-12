@@ -20,7 +20,7 @@ $(function(){
 
     // 一些计算所需的变量
     var seekT, seekLoc, seekBarPos, cM, ctMinutes, ctSeconds, curMinutes, curSeconds, durMinutes, durSeconds, playProgress, bTime, nTime = 0
-    var musicImgsData = ['img/1.jpeg','img/bg.jpg','img/bg1.jpg','img/bg2.jpg']    // 图片地址数组
+    var musicImgsData = ['img/bg0.jpg','img/bg.jpg','img/bg1.jpg','img/bg2.jpg']    // 图片地址数组
     var musicNameData = ['暗号','出山','盗将行','归去来兮'];                   // 歌曲名数组
     var artistNameData = ['周杰伦','花粥/王胜娚','花粥/马雨阳','花粥']            // 创作歌手数组
     var musicUrls=['mp3/暗号-周杰伦_哔哩哔哩_bilibili.mp4','mp3/music1.mp3','mp3/music2.mp3','mp3/music3.mp3'];// 歌曲mp3数组
@@ -255,3 +255,16 @@ $(function(){
     initPlayer();
 
 });
+
+function displayTime() {
+    let now = new Date();
+    let clockElement = document.querySelector('.info');
+    let timeString = `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
+    clockElement.textContent = '现在是北京时间：'+timeString+'       BJTime';
+}
+
+// 初始化显示一次
+displayTime();
+
+// 每秒更新一次
+setInterval(displayTime, 1000);

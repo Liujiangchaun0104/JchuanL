@@ -132,208 +132,227 @@
             </div>
           </div>
           <article id="page">
-            <div class="article-container">
-              <h2>music</h2>
-              <!-- <meting-js auto="">
+            <h2>music</h2>
+            <!-- <meting-js auto="">
                         </meting-js> -->
-              <!-- 音乐播放器 -->
-              <div id="player">
-                <!-- 歌曲信息模块 -->
-                <div id="player-content1">
-                  <!-- 歌曲名 -->
-                  <div class="music-name"></div>
-                  <!-- 歌手名 -->
-                  <div class="artist-name"></div>
-                  <!-- 歌曲时间 -->
-                  <div class="time">
-                    <!-- 当前播放的时间 -->
-                    <div class="current-time"></div>
-                    <!-- 歌曲总时长 -->
-                    <div class="total-time"></div>
-                  </div>
-                  <!-- 进度条 -->
+            <!-- 音乐播放器 -->
+            <div id="player">
+              <!-- 歌曲信息模块 -->
+              <div id="player-content1">
+                <!-- 歌曲名 -->
+                <div class="music-name"></div>
+                <!-- 歌手名 -->
+                <div class="artist-name"></div>
+                <!-- 歌曲时间 -->
+                <div class="time">
+                  <!-- 当前播放的时间 -->
+                  <div class="current-time"></div>
+                  <!-- 歌曲总时长 -->
+                  <div class="total-time"></div>
+                </div>
+                <!-- 进度条 -->
 
-                  <div id="s-area">
-                    <!-- 鼠标移动到进度条上，显示的时间信息 -->
-                    <div id="ins-time"></div>
-                    <!-- 鼠标移动到进度条上，进度条变暗部分-->
-                    <div id="s-hover"></div>
-                    <!-- 表示当前歌曲播放进度的蓝色进度条 -->
-                    <div id="seek-bar"></div>
-                  </div>
-                </div>
-                <!-- 控制模块 -->
-                <div id="player-content2">
-                  <!-- 左侧歌曲封面旋转模块 -->
-                  <div class="music-imgs">
-                    <!-- 封面图 -->
-                    <div class="img"></div>
-                    <!-- 歌曲缓冲时的提示文字 -->
-                    <div id="buffer-box">缓冲…</div>
-                  </div>
-                  <!-- 右侧歌曲操作模块 -->
-                  <div class="player-controls">
-                    <!-- 上一首按钮 -->
-                    <div class="btn prev iconfont">&#xe603;</div>
-                    <!-- 暂停/播放 按钮 -->
-                    <div
-                      class="btn play-pause icon-jiediankaishi iconfont"
-                    ></div>
-                    <!-- 下一首按钮 -->
-                    <div class="btn next iconfont">&#xe602;</div>
-                  </div>
+                <div id="s-area">
+                  <!-- 鼠标移动到进度条上，显示的时间信息 -->
+                  <div id="ins-time"></div>
+                  <!-- 鼠标移动到进度条上，进度条变暗部分-->
+                  <div id="s-hover"></div>
+                  <!-- 表示当前歌曲播放进度的蓝色进度条 -->
+                  <div id="seek-bar"></div>
                 </div>
               </div>
-              <div class="error"></div>
-              <hr />
-              <h2><a href="comment.html" class="dailylink">Share your Viewpoints-------------------------请点击以访问</a></h2>
-              <hr>
-              <h2>经验分享</h2>
-              <div class="share">
-                <a href="https://www.cnblogs.com/colaplus-v">欢迎访问我的博客-----------------------请点击以访问</a>
-              </div>
-              <hr>
-              <h2>skills</h2>
-              <div class="skillbox">
-                <div class="skillbar">
-                  <div
-                    class="skillbar-title"
-                    style="
-                      background: linear-gradient(
-                        to right,
-                        #ff0066 0%,
-                        #ff00cc 100%
-                      );
-                      width: 5%;
-                    "
-                  >
-                    <span>Java</span>
-                  </div>
-                  <div class="skill-bar-percent">5%</div>
+              <!-- 控制模块 -->
+              <div id="player-content2">
+                <!-- 左侧歌曲封面旋转模块 -->
+                <div class="music-imgs">
+                  <!-- 封面图 -->
+                  <div class="img"></div>
+                  <!-- 歌曲缓冲时的提示文字 -->
+                  <div id="buffer-box">缓冲…</div>
                 </div>
-                <div class="skillbar">
-                  <div
-                    class="skillbar-title"
-                    style="
-                      background: linear-gradient(
-                        to right,
-                        #9900ff 0%,
-                        #cc66ff 100%
-                      );
-                      width: 20%;
-                    "
-                  >
-                    <span>前端</span>
-                  </div>
-                  <div class="skill-bar-percent">20%</div>
-                </div>
-                <div class="skillbar">
-                  <div
-                    class="skillbar-title"
-                    style="
-                      background: linear-gradient(
-                        to right,
-                        #2196f3 0%,
-                        #42a5f5 100%
-                      );
-                      width: 0%;
-                    "
-                  >
-                    <span>Spring</span>
-                  </div>
-                  <div class="skill-bar-percent">0%</div>
-                </div>
-                <div class="skillbar">
-                  <div
-                    class="skillbar-title"
-                    style="
-                      background: linear-gradient(
-                        to right,
-                        #00bcd4 0%,
-                        #80deea 100%
-                      );
-                      width: 0%;
-                    "
-                  >
-                    <span>SpringMVC</span>
-                  </div>
-                  <div class="skill-bar-percent">0%</div>
-                </div>
-                <div class="skillbar">
-                  <div
-                    class="skillbar-title"
-                    style="
-                      background: linear-gradient(
-                        to right,
-                        #00bcd4 0%,
-                        #f54009 100%
-                      );
-                      width: 0%;
-                    "
-                  >
-                    <span>SpringBoot</span>
-                  </div>
-                  <div class="skill-bar-percent">0%</div>
-                </div>
-                <div class="skillbar">
-                  <div
-                    class="skillbar-title"
-                    style="
-                      background: linear-gradient(
-                        to right,
-                        #4caf50 0%,
-                        #81c784 100%
-                      );
-                      width: 0%;
-                    "
-                  >
-                    <span>Mybatis</span>
-                  </div>
-                  <div class="skill-bar-percent">0%</div>
-                </div>
-                <div class="skillbar">
-                  <div
-                    class="skillbar-title"
-                    style="
-                      background: linear-gradient(
-                        to right,
-                        #ffeb3b 0%,
-                        #fff176 100%
-                      );
-                      width: 35%;
-                    "
-                  >
-                    <span>数据结构与算法</span>
-                  </div>
-                  <div class="skill-bar-percent">35%</div>
+                <!-- 右侧歌曲操作模块 -->
+                <div class="player-controls">
+                  <!-- 上一首按钮 -->
+                  <div class="btn prev iconfont">&#xe603;</div>
+                  <!-- 暂停/播放 按钮 -->
+                  <div class="btn play-pause icon-jiediankaishi iconfont"></div>
+                  <!-- 下一首按钮 -->
+                  <div class="btn next iconfont">&#xe602;</div>
                 </div>
               </div>
-
-              <hr />
-              <h2>刷题</h2>
-              <div class="tool">
-                <a
-                  href="https://leetcode-cn.com/problemset/all/"
-                  target="_blank"
-                  >Leetcode</a
-                ><br />
-                <a
-                  href="https://www.nowcoder.com/ta/coding-interviews"
-                  target="_blank"
-                  >剑指 Offer</a
+            </div>
+            <div class="info">
+                今
+            </div>
+            <hr />
+            <h2>
+              <a href="comment.html" class="dailylink"
+                >Share your Viewpoints-------------------------请点击以访问</a
+              >
+            </h2>
+            <hr />
+            <h2>经验分享</h2>
+            <div class="share">
+              <a href="https://www.cnblogs.com/colaplus-v"
+                >欢迎访问我的博客-----------------------请点击以访问</a
+              >
+            </div>
+            <hr />
+            <h2>skills</h2>
+            <div class="skillbox">
+              <div class="skillbar">
+                <div
+                  class="skillbar-title"
+                  style="
+                    background: linear-gradient(
+                      to right,
+                      #ff0066 0%,
+                      #ff00cc 100%
+                    );
+                    width: 5%;
+                  "
                 >
+                  <span>Java</span>
+                </div>
+                <div class="skill-bar-percent">5%</div>
               </div>
+              <div class="skillbar">
+                <div
+                  class="skillbar-title"
+                  style="
+                    background: linear-gradient(
+                      to right,
+                      #9900ff 0%,
+                      #cc66ff 100%
+                    );
+                    width: 20%;
+                  "
+                >
+                  <span>前端</span>
+                </div>
+                <div class="skill-bar-percent">20%</div>
+              </div>
+              <div class="skillbar">
+                <div
+                  class="skillbar-title"
+                  style="
+                    background: linear-gradient(
+                      to right,
+                      #2196f3 0%,
+                      #42a5f5 100%
+                    );
+                    width: 0%;
+                  "
+                >
+                  <span>Spring</span>
+                </div>
+                <div class="skill-bar-percent">0%</div>
+              </div>
+              <div class="skillbar">
+                <div
+                  class="skillbar-title"
+                  style="
+                    background: linear-gradient(
+                      to right,
+                      #00bcd4 0%,
+                      #80deea 100%
+                    );
+                    width: 0%;
+                  "
+                >
+                  <span>SpringMVC</span>
+                </div>
+                <div class="skill-bar-percent">0%</div>
+              </div>
+              <div class="skillbar">
+                <div
+                  class="skillbar-title"
+                  style="
+                    background: linear-gradient(
+                      to right,
+                      #00bcd4 0%,
+                      #f54009 100%
+                    );
+                    width: 0%;
+                  "
+                >
+                  <span>SpringBoot</span>
+                </div>
+                <div class="skill-bar-percent">0%</div>
+              </div>
+              <div class="skillbar">
+                <div
+                  class="skillbar-title"
+                  style="
+                    background: linear-gradient(
+                      to right,
+                      #4caf50 0%,
+                      #81c784 100%
+                    );
+                    width: 0%;
+                  "
+                >
+                  <span>Mybatis</span>
+                </div>
+                <div class="skill-bar-percent">0%</div>
+              </div>
+              <div class="skillbar">
+                <div
+                  class="skillbar-title"
+                  style="
+                    background: linear-gradient(
+                      to right,
+                      #ffeb3b 0%,
+                      #fff176 100%
+                    );
+                    width: 35%;
+                  "
+                >
+                  <span>数据结构与算法</span>
+                </div>
+                <div class="skill-bar-percent">35%</div>
+              </div>
+            </div>
 
-              <hr />
-              <h2>收藏</h2>
-              <div class="tool">
-                <!-- <a href="http://tooool.org/" target="_blank" rel="noopener noreferrer">程序员导航、</a>
+            <hr />
+            <h2>刷题</h2>
+            <div class="tool">
+              <a href="https://leetcode-cn.com/problemset/all/" target="_blank"
+                >Leetcode</a
+              ><br />
+              <a
+                href="https://www.nowcoder.com/ta/coding-interviews"
+                target="_blank"
+                >剑指 Offer</a
+              >
+            </div>
+
+            <hr />
+            <h2>收藏</h2>
+            <div class="tool">
+              <!-- <a href="http://tooool.org/" target="_blank" rel="noopener noreferrer">程序员导航、</a>
                             <a href="https://adzhp.cn/" target="_blank" rel="noopener noreferrer">爱达杂货铺、</a>
                             <a href="http://ifeve.com/" target="_blank" rel="noopener noreferrer">并发编程网</a> -->
-                <a href="https://tophub.today/" target="_blank" rel="noopener noreferrer">今日热榜</a>
-                <span class="space"></span>
-                <a href="https://bongo.cat/" target="_blank" rel="noopener noreferrer">小猫鼓手🥁</a>
-              </div>
+              <a
+                href="https://tophub.today/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >今日热榜</a
+              >
+              <span class="space"></span>
+              <a
+                href="https://bongo.cat/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >小猫鼓手🥁</a
+              >
+              <span class="space"></span>
+              <a
+                href="https://www.msdmanuals.com/zh#mission"
+                target="_blank"
+                rel="noopener noreferrer"
+                >医疗手册</a
+              >
             </div>
           </article>
         </div>
