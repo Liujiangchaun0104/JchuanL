@@ -1,36 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
-<meta charset="UTF-8">
-<title>给我留言</title>
-<style>
-    .comments-container {
-        margin: 50px auto;
-        width: 80%;
-        max-width: 600px;
-    }
-    .comment-form {
-        margin-bottom: 20px;
-    }
-    textarea {
-        width: 100%;
-        min-height: 100px;
-        resize: vertical;
-    }
-    button {
-        background-color: #4CAF50;
-        color: white;
-        padding: 10px 20px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 10px 2px;
-        cursor: pointer;
-        border: none;
-        border-radius: 5px;
-    }
-</style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Comments</title>
+    <style>
+        .comments-container {
+            margin: 50px auto;
+            width: 80%;
+            max-width: 600px;
+        }
+        .comment-form {
+            margin-bottom: 20px;
+        }
+        textarea {
+            width: 100%;
+            min-height: 100px;
+            resize: vertical;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 2px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
 
@@ -47,6 +48,18 @@
     </form>
     <h2>评论列表</h2>
     <div id="commentsList"></div>
+</div>
+
+<div id="comments">
+  <!-- utterances 评论插件：会把评论存到你的 GitHub Issues，所有人可见 -->
+  <script src="https://utteranc.es/client.js"
+    repo="Liujiangchaun0104/JchuanL"
+    issue-term="pathname"
+    label="comment"
+    theme="github-light"
+    crossorigin="anonymous"
+    async>
+  </script>
 </div>
 
 <script>
