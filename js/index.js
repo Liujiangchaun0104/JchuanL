@@ -321,7 +321,7 @@ function startCountdownToDate(targetDateString, onCountdownEnd) {
       );
       let seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
 
-      countdownElement.innerText = `距离2025元旦还剩:`;
+      countdownElement.innerText = `距离2026元旦还剩:`;
         countdownShowtime.innerHTML = `${days
           .toString()
           .padStart(2, "0")}天 ${hours
@@ -339,6 +339,6 @@ function startCountdownToDate(targetDateString, onCountdownEnd) {
 }
 
 // 设置目标日期为2025年1月1日
-startCountdownToDate("2025-01-01T00:00:00", function () {
+startCountdownToDate("2026-01-01T00:00:00", function () {
   alert("倒计时到2025年1月1日结束!");
 });
